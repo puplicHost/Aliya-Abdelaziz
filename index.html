@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en" class="overflow-x-hidden">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Aliya Abdelaziz | Digital Marketing Specialist</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+    rel="stylesheet" />
+  <script src="https://cdn.tailwindcss.com?plugins=forms,typography,container-queries"></script>
+  <script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#2D1ED7",
+            "background-light": "#f8fafc",
+            "background-dark": "#050505",
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            sans: ["Inter", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.5rem",
+            'large': '2rem',
+          },
+        },
+      },
+    };
+  </script>
+  <style type="text/tailwindcss">
+    html, body {
+            background-color: #050505;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+        .hero-gradient {
+            background: radial-gradient(circle at 50% 100%, #2d1ed7 0%, #1e1b4b 30%, #050505 100%);
+        }
+        .cosmic-arc {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 140%;
+            height: 300px;
+            background: linear-gradient(to bottom, transparent, rgba(45, 30, 215, 0.1));
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100% 100% 0 0;
+            filter: blur(40px);
+        }
+        .card-glow:hover {
+            box-shadow: 0 0 30px rgba(45, 30, 215, 0.2);
+            transition: all 0.3s ease;
+        }
+        .nav-blur {
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+        .skill-glow {
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            background: radial-gradient(circle, rgba(45, 30, 215, 0.15) 0%, transparent 70%);
+            z-index: 0;
+            pointer-events: none;
+        }
+        .glow-button {
+            background: linear-gradient(135deg, #2D1ED7 0%, #7C3AED 100%);
+            box-shadow: 0 4px 20px rgba(45, 30, 215, 0.4);
+        }
+        .glow-button:hover {
+            box-shadow: 0 4px 30px rgba(45, 30, 215, 0.6);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(45, 30, 215, 0.3);
+        }
+    </style>
+</head>
+
+<body class="text-white selection:bg-primary selection:text-white font-sans overflow-x-hidden">
+  <nav class="fixed top-0 w-full z-50 border-b border-white/5 bg-black/50 nav-blur">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center space-x-12">
+        <a class="text-2xl font-display font-bold tracking-tighter text-white" href="#">ALIYA.</a>
+        <div class="hidden md:flex items-center space-x-8 text-sm font-medium text-gray-400">
+          <a class="text-white hover:text-white transition-colors" href="#">Home</a>
+          <a class="hover:text-white transition-colors" href="#about">About</a>
+          <a class="hover:text-white transition-colors" href="#experience">Experience</a>
+          <a class="hover:text-white transition-colors" href="#skills">Skills</a>
+          <a class="hover:text-white transition-colors" href="#education">Education</a>
+          <a class="hover:text-white transition-colors" href="#contact">Contact</a>
+        </div>
+      </div>
+      <button id="mobile-menu-btn"
+        class="md:hidden w-10 h-10 flex items-center justify-center text-white focus:outline-none">
+        <span class="material-symbols-outlined">menu</span>
+      </button>
+      <a class="hidden md:block px-6 py-2.5 bg-primary hover:bg-opacity-90 transition-all rounded-full text-sm font-semibold shadow-lg shadow-primary/20"
+        href="pdfs/cv.pdf" download>
+        Download CV
+      </a>
+    </div>
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu"
+      class="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center space-y-8 text-xl font-bold tracking-tighter transition-all duration-300 translate-x-full md:hidden">
+      <button id="close-menu-btn" class="absolute top-8 right-8 text-white">
+        <span class="material-symbols-outlined text-4xl">close</span>
+      </button>
+      <a class="hover:text-primary transition-colors mobile-link" href="#">Home</a>
+      <a class="hover:text-primary transition-colors mobile-link" href="#about">About</a>
+      <a class="hover:text-primary transition-colors mobile-link" href="#portfolio">Portfolio</a>
+      <a class="hover:text-primary transition-colors mobile-link" href="#experience">Experience</a>
+      <a class="hover:text-primary transition-colors mobile-link" href="#skills">Skills</a>
+      <a class="hover:text-primary transition-colors mobile-link" href="#education">Education</a>
+      <a class="px-8 py-3 bg-primary rounded-full text-lg shadow-xl shadow-primary/20 mobile-link" href="pdfs/cv.pdf"
+        download>Download CV</a>
+    </div>
+  </nav>
+  <section class="relative min-h-screen flex flex-col items-center justify-center pt-20 hero-gradient overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <div class="cosmic-arc"></div>
+      <div class="absolute top-1/4 left-1/4 w-2 h-2 bg-blue-500 rounded-full blur-sm animate-pulse"></div>
+      <div class="absolute top-1/2 right-1/4 w-1 h-1 bg-purple-500 rounded-full blur-sm animate-ping"></div>
+      <div class="absolute bottom-1/3 left-1/3 w-3 h-3 bg-white/20 rounded-full blur-xl"></div>
+    </div>
+    <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
+      <div class="flex flex-col items-center mb-8 md:mb-12">
+        <span class="text-3xl md:text-6xl font-display font-black tracking-tighter mb-4">ALIYA.</span>
+        <h1
+          class="text-3xl sm:text-5xl md:text-8xl font-display font-black leading-tight tracking-tight uppercase px-4 text-center">
+          CRAFTING DIGITAL<br class="hidden sm:block" /> SUCCESS STORIES
+        </h1>
+      </div>
+
+      <div
+        class="mt-8 flex flex-wrap justify-center gap-4 text-xs md:text-sm font-medium tracking-widest text-gray-300 uppercase">
+        <span>Strategy</span>
+        <span class="text-primary opacity-50">•</span>
+        <span>Social Media</span>
+        <span class="text-primary opacity-50">•</span>
+        <span>Brand Growth</span>
+      </div>
+    </div>
+  </section>
+  <section class="bg-background-dark py-20 md:py-32 px-6" id="about">
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div class="relative group">
+          <div
+            class="absolute -inset-4 bg-gradient-to-r from-primary to-purple-600 rounded-3xl blur opacity-20 group-hover:opacity-40 transition duration-1000">
+          </div>
+          <div
+            class="relative rounded-2xl overflow-hidden border border-white/10 aspect-square flex items-center justify-center bg-black/40">
+            <span class="material-symbols-outlined text-[10rem] text-primary/30">face</span>
+            <div class="absolute bottom-0 left-0 right-0 p-8 bg-gradient-to-t from-black/80 to-transparent">
+              <div class="flex items-center space-x-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-primary/20 border border-primary/40 flex items-center justify-center">
+                  <span class="material-symbols-outlined text-primary">verified</span>
+                </div>
+                <div>
+                  <h4 class="font-bold text-lg">Aliya Abdelaziz</h4>
+                  <p class="text-sm text-gray-400">Marketing Specialist</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="space-y-8">
+          <div>
+            <h2 class="text-3xl md:text-5xl font-display font-bold mb-6">About Me</h2>
+            <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
+            <p class="text-gray-400 text-lg leading-relaxed mb-6">
+              I am a results-driven professional with a background in <strong>Textile Engineering</strong> from the
+              Faculty of Applied Arts, which has uniquely equipped me with a blend of analytical precision and creative
+              problem-solving skills.
+            </p>
+            <p class="text-gray-400 text-lg leading-relaxed">
+              With over <strong>two years of experience</strong> specializing in the Gulf market, I have honed my
+              ability to craft data-backed marketing strategies that don't just reach audiences, but convert them. My
+              approach combines psychological insight with technical excellence to enhance brand presence and drive
+              measurable growth.
+            </p>
+          </div>
+          <div class="grid grid-cols-2 gap-6">
+            <div class="p-6 rounded-2xl glass-card border border-white/5 space-y-2">
+              <h5 class="text-primary font-bold text-2xl">24+</h5>
+              <p class="text-gray-500 text-sm uppercase tracking-wider">Months Experience</p>
+            </div>
+            <div class="p-6 rounded-2xl glass-card border border-white/5 space-y-2">
+              <h5 class="text-primary font-bold text-2xl">Gulf</h5>
+              <p class="text-gray-500 text-sm uppercase tracking-wider">Market Expertise</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-background-dark py-24 px-6 overflow-hidden">
+    <div class="max-w-7xl mx-auto">
+
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-8 md:gap-12 border-t border-white/10 pt-12">
+        <div class="space-y-4 group">
+          <span
+            class="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">schedule</span>
+          <h3 class="text-xl font-display font-medium leading-tight">2+ Years of market experience</h3>
+        </div>
+        <div class="space-y-4 group">
+          <span
+            class="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">public</span>
+          <h3 class="text-xl font-display font-medium leading-tight">Gulf Market Expertise</h3>
+        </div>
+        <div class="space-y-4 group">
+          <span
+            class="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">auto_awesome</span>
+          <h3 class="text-xl font-display font-medium leading-tight">Creative Strategy Development</h3>
+        </div>
+        <div class="space-y-4 group">
+          <span
+            class="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">verified_user</span>
+          <h3 class="text-xl font-display font-medium leading-tight">Client-Centric Growth Results</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-background-dark py-20 md:py-24 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-between mb-16">
+        <h2 class="text-3xl md:text-5xl font-display font-bold">My expertise</h2>
+        <div class="hidden md:flex space-x-2">
+          <button
+            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+            <span class="material-symbols-outlined">chevron_left</span>
+          </button>
+          <button
+            class="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center hover:bg-white hover:text-black transition-colors">
+            <span class="material-symbols-outlined">chevron_right</span>
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="space-y-6 group">
+          <div class="aspect-video relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent flex items-center justify-center">
+              <span class="material-symbols-outlined text-6xl text-primary opacity-40">tactic</span>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h4 class="text-2xl font-display font-semibold">Strategy Development</h4>
+            <p class="text-gray-400 text-sm">Developing comprehensive data-driven marketing frameworks to achieve brand
+              objectives.</p>
+          </div>
+        </div>
+        <div class="space-y-6 group">
+          <div class="aspect-video relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-transparent flex items-center justify-center">
+              <span class="material-symbols-outlined text-6xl text-purple-500 opacity-40">share</span>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h4 class="text-2xl font-display font-semibold">Social Media Ads</h4>
+            <p class="text-gray-400 text-sm">Implementing innovative campaigns and managing multi-platform social
+              presence.</p>
+          </div>
+        </div>
+        <div class="space-y-6 group">
+          <div class="aspect-video relative overflow-hidden rounded-2xl bg-[#0a0a0a] border border-white/5">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-400/20 to-transparent flex items-center justify-center">
+              <span class="material-symbols-outlined text-6xl text-blue-400 opacity-40">forum</span>
+            </div>
+          </div>
+          <div class="space-y-4">
+            <h4 class="text-2xl font-display font-semibold">Client Persuasion</h4>
+            <p class="text-gray-400 text-sm">Persuading clients and implementing customer relations strategies for
+              growth.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-background-dark py-32 px-6 border-t border-white/5 overflow-hidden" id="portfolio">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+        <div>
+          <h2 class="text-3xl md:text-5xl font-display font-bold mb-4 uppercase">Selected Portfolio</h2>
+          <div class="w-20 h-1 bg-primary rounded-full"></div>
+          <p class="text-gray-400 mt-6 max-w-2xl">
+            A curated collection of marketing strategies, research, and creative plans developed for various brands in
+            the Gulf region.
+          </p>
+        </div>
+        <div class="flex space-x-2">
+          <span
+            class="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+            15 Projects
+          </span>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <!-- 1: استراتيجية تسويقية لشركة سند -->
+        <a href="pdfs/استراتيجية تسويقية لشركة سند.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-primary/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div
+            class="absolute -right-4 -top-4 w-24 h-24 bg-primary/10 rounded-full blur-2xl group-hover:bg-primary/20 transition-colors">
+          </div>
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-primary/20 flex items-center justify-center mb-6 border border-primary/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-primary">description</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">استراتيجية تسويقية لشركة سند</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Sanad Strategy</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-primary font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-primary group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 2: استراتيجية تسويقية لارنج -->
+        <a href="pdfs/استراتيجية تسويقية لارنج.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-purple-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div
+            class="absolute -right-4 -top-4 w-24 h-24 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 transition-colors">
+          </div>
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-purple-500/20 flex items-center justify-center mb-6 border border-purple-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-purple-500">tactic</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">استراتيجية تسويقية لارنج</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Orange Marketing</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-purple-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-purple-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 3: build plus - marketing strategy -->
+        <a href="pdfs/build plus - marketing strategy.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-blue-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div
+            class="absolute -right-4 -top-4 w-24 h-24 bg-blue-500/10 rounded-full blur-2xl group-hover:bg-blue-500/20 transition-colors">
+          </div>
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-blue-500/20 flex items-center justify-center mb-6 border border-blue-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-blue-500">strategy</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">Build Plus Strategy</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Real Estate Plan</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-blue-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-blue-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 4: الخطة التسويقية لقوه -->
+        <a href="pdfs/الخطة التسويقية   لقوه.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-red-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div
+            class="absolute -right-4 -top-4 w-24 h-24 bg-red-500/10 rounded-full blur-2xl group-hover:bg-red-500/20 transition-colors">
+          </div>
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-red-500/20 flex items-center justify-center mb-6 border border-red-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-red-500">campaign</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">خطة تسويقية لقوه</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Quwwa Plan</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-red-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-red-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 5: مطعم كبسة -->
+        <a href="pdfs/مطعم كبسة .pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-orange-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div
+            class="absolute -right-4 -top-4 w-24 h-24 bg-orange-500/10 rounded-full blur-2xl group-hover:bg-orange-500/20 transition-colors">
+          </div>
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-orange-500/20 flex items-center justify-center mb-6 border border-orange-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-orange-500">restaurant</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">مطعم كبسة</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Brand Identity</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-orange-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-orange-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 6: روح بيروت -->
+        <a href="pdfs/روح بيروت.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-emerald-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div
+            class="absolute -right-4 -top-4 w-24 h-24 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 transition-colors">
+          </div>
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center mb-6 border border-emerald-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-emerald-500">auto_awesome</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">روح بيروت</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Brand Experience</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-emerald-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-emerald-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 7: هيكس استراتيجي -->
+        <a href="pdfs/هيكس استراتيجي.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-indigo-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-indigo-500/20 flex items-center justify-center mb-6 border border-indigo-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-indigo-500">analytics</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">هيكس استراتيجي</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Product Strategy</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-indigo-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-indigo-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 8: مقترحات ليوم التاسيس -->
+        <a href="pdfs/مقترحات ليوم التاسيس.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-amber-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-amber-500/20 flex items-center justify-center mb-6 border border-amber-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-amber-500">celebration</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">مقترحات يوم التأسيس</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Campaign Proposals</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-amber-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-amber-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 9: Nebras Code -->
+        <a href="pdfs/Nebras Code.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-cyan-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-cyan-500/20 flex items-center justify-center mb-6 border border-cyan-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-cyan-500">terminal</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">Nebras Code</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Digital Dev</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-cyan-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-cyan-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 10: SUADI TRACKING PLAN -->
+        <a href="pdfs/SUADI TRACKING PLAN.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-gray-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-gray-500/20 flex items-center justify-center mb-6 border border-gray-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-gray-400">monitoring</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">Saudi Tracking Plan</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Data Tracking</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-gray-400 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-gray-400 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 11: Colomby Coffee Shop -->
+        <a href="pdfs/Colomby Coffee Shop opening.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-amber-700/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-amber-700/20 flex items-center justify-center mb-6 border border-amber-700/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-amber-700">coffee</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">Colomby Coffee</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Opening Plan</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-amber-700 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-amber-700 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 12: رزنامة شهرية -->
+        <a href="pdfs/رزنامة شهرية.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-pink-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-pink-500/20 flex items-center justify-center mb-6 border border-pink-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-pink-500">calendar_month</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">رزنامة شهرية</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Monthly Calendar</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-pink-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-pink-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 13: Content Plan -->
+        <a href="pdfs/المحتوى النصي للمنشورات.pdf+ خطة النشر.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-lime-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-lime-500/20 flex items-center justify-center mb-6 border border-lime-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-lime-500">history_edu</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">المحتوى وخطة النشر</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Publishing Strategy</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-lime-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-lime-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 14: Presentation -->
+        <a href="pdfs/Copy of marketing Presentation.pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-rose-500/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-rose-500/20 flex items-center justify-center mb-6 border border-rose-500/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-rose-500">slideshow</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">Marketing Pitch</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Presenation</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-rose-500 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-rose-500 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+
+        <!-- 15: Mood Board -->
+        <a href="pdfs/mood board (4).pdf" target="_blank"
+          class="group relative p-8 rounded-3xl glass-card border border-white/5 hover:border-orange-400/40 transition-all duration-500 card-glow flex flex-col justify-between min-h-[280px] overflow-hidden">
+          <div class="relative z-10">
+            <div
+              class="w-12 h-12 rounded-2xl bg-orange-400/20 flex items-center justify-center mb-6 border border-orange-400/20 group-hover:scale-110 transition-transform">
+              <span class="material-symbols-outlined text-orange-400">palette</span>
+            </div>
+            <h3 class="text-xl font-display font-bold leading-tight mb-2">Mood Board</h3>
+            <p class="text-gray-500 text-xs uppercase tracking-widest font-medium">Visual Direction</p>
+          </div>
+          <div class="relative z-10 mt-8 flex items-center justify-between">
+            <span class="text-orange-400 font-bold text-sm">View Work</span>
+            <span
+              class="material-symbols-outlined text-orange-400 group-hover:translate-x-2 transition-transform">arrow_right_alt</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <div class="max-w-7xl mx-auto">
+    <div class="mb-20">
+      <h2 class="text-3xl md:text-5xl font-display font-bold mb-4">Core Strengths</h2>
+      <div class="w-20 h-1 bg-primary rounded-full"></div>
+    </div>
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-20">
+      <div class="relative">
+        <div class="skill-glow -top-10 -left-10"></div>
+        <h3 class="text-2xl font-display font-semibold mb-10 flex items-center">
+          <span class="material-symbols-outlined mr-3 text-primary">insights</span>
+          Marketing Expertise
+        </h3>
+        <div class="space-y-8">
+          <div>
+            <div class="flex justify-between mb-3 text-sm font-medium">
+              <span class="flex items-center"><span class="material-symbols-outlined text-xs mr-2">tactic</span>
+                Marketing Strategy</span>
+              <span class="text-primary">95%</span>
+            </div>
+            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-primary rounded-full" style="width: 95%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-3 text-sm font-medium">
+              <span class="flex items-center"><span class="material-symbols-outlined text-xs mr-2">forum</span> Client
+                Persuasion</span>
+              <span class="text-primary">92%</span>
+            </div>
+            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-primary rounded-full" style="width: 92%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-3 text-sm font-medium">
+              <span class="flex items-center"><span class="material-symbols-outlined text-xs mr-2">search</span>
+                SEO & Advertising</span>
+              <span class="text-primary">88%</span>
+            </div>
+            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-primary rounded-full" style="width: 88%"></div>
+            </div>
+          </div>
+          <div>
+            <div class="flex justify-between mb-3 text-sm font-medium">
+              <span class="flex items-center"><span class="material-symbols-outlined text-xs mr-2">psychology</span>
+                Creative Thinking</span>
+              <span class="text-primary">90%</span>
+            </div>
+            <div class="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+              <div class="h-full bg-primary rounded-full" style="width: 90%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="relative">
+        <div class="skill-glow -top-10 -right-10"></div>
+        <h3 class="text-2xl font-display font-semibold mb-10 flex items-center">
+          <span class="material-symbols-outlined mr-3 text-primary">terminal</span>
+          Professional proficiency
+        </h3>
+        <div class="grid grid-cols-2 gap-4">
+          <div
+            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
+            <span class="material-symbols-outlined text-3xl mb-4 text-primary">language</span>
+            <span class="text-lg font-medium">Arabic</span>
+            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Native</span>
+          </div>
+          <div
+            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
+            <span class="material-symbols-outlined text-3xl mb-4 text-primary">translate</span>
+            <span class="text-lg font-medium">English</span>
+            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Upper Intermediate</span>
+          </div>
+          <div
+            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center col-span-2">
+            <span class="material-symbols-outlined text-3xl mb-4 text-primary">inventory_2</span>
+            <span class="text-lg font-medium">MS Office (Excel – Word)</span>
+            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest">Advanced proficiency</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section>
+  <section class="bg-background-dark py-32 px-6 border-t border-white/5 overflow-hidden" id="education">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <h2 class="text-4xl md:text-5xl font-display font-bold">Educational Path</h2>
+        <p class="text-gray-500 mt-4 font-medium uppercase tracking-[0.2em] text-xs">Foundation of excellence</p>
+      </div>
+      <div class="relative max-w-4xl mx-auto">
+        <div
+          class="absolute left-1/2 transform -translate-x-1/2 h-full w-[1px] bg-gradient-to-b from-primary via-primary/50 to-transparent hidden md:block">
+        </div>
+        <div class="relative flex flex-col md:flex-row items-center justify-center">
+          <div class="w-full md:w-1/2 md:pr-16 mb-8 md:mb-0 text-right hidden md:block">
+            <span class="text-primary font-display font-bold text-4xl opacity-20">2020</span>
+          </div>
+          <div
+            class="z-10 w-12 h-12 rounded-full bg-primary border-4 border-background-dark flex items-center justify-center hidden md:flex">
+            <span class="material-symbols-outlined text-white text-sm">school</span>
+          </div>
+          <div class="w-full md:w-1/2 md:pl-16">
+            <div class="bg-white/[0.03] border border-white/10 p-8 rounded-3xl card-glow relative">
+              <div
+                class="md:hidden mb-4 inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-bold">
+                2020 - Present</div>
+              <h4 class="text-2xl font-display font-semibold mb-2">Faculty of Applied Arts</h4>
+              <p class="text-primary font-medium mb-4">Department of Textile Engineering</p>
+              <p class="text-gray-400 text-sm leading-relaxed">Developing a unique perspective at the intersection of
+                technical engineering principles and creative design, providing a solid analytical foundation for
+                complex marketing strategies.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="bg-background-dark py-32 px-6 border-t border-white/5 overflow-hidden" id="experience">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-20">
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4 uppercase">Professional Journey</h2>
+        <div class="w-20 h-1 bg-primary rounded-full"></div>
+      </div>
+      <div class="bg-white/[0.03] border border-white/10 rounded-3xl p-8 md:p-12 card-glow transition-all">
+        <div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
+          <div>
+            <h3 class="text-3xl font-display font-bold text-white mb-2">Public Relations &amp; Marketing Specialist</h3>
+            <p class="text-primary text-xl font-medium">Mulhamah</p>
+            <p class="text-gray-500 flex items-center mt-2">
+              <span class="material-symbols-outlined text-sm mr-2">location_on</span>
+              Saudi Arabia (Remote)
+            </p>
+          </div>
+          <div class="bg-primary/10 border border-primary/20 px-6 py-3 rounded-full text-primary font-bold">
+            2 Years Experience
+          </div>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center shrink-0 mr-4">
+                <span class="material-symbols-outlined text-primary">calendar_month</span>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-lg mb-1">Monthly Planning</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Developed and executed monthly plans to achieve
+                  specific brand milestones.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center shrink-0 mr-4">
+                <span class="material-symbols-outlined text-primary">edit_note</span>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-lg mb-1">Content Strategy</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Created comprehensive content strategies and marketing
+                  plans aligned with business goals.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center shrink-0 mr-4">
+                <span class="material-symbols-outlined text-primary">account_circle</span>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-lg mb-1">Social Media Management</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Managed official company accounts and maintained a
+                  consistent digital presence.</p>
+              </div>
+            </div>
+          </div>
+          <div class="space-y-6">
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center shrink-0 mr-4">
+                <span class="material-symbols-outlined text-primary">person_add</span>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-lg mb-1">Client Acquisition</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Acquired new clients and effectively handled ongoing
+                  customer relations.</p>
+              </div>
+            </div>
+            <div class="flex items-start">
+              <div class="w-10 h-10 rounded-lg bg-primary/20 flex items-center justify-center shrink-0 mr-4">
+                <span class="material-symbols-outlined text-primary">assignment</span>
+              </div>
+              <div>
+                <h4 class="font-display font-semibold text-lg mb-1">Team Coordination</h4>
+                <p class="text-gray-400 text-sm leading-relaxed">Oversaw task progress and coordinated seamlessly with
+                  the team to ensure delivery.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-background-dark py-20 md:py-32 px-6 border-t border-white/5">
+    <div class="max-w-4xl mx-auto text-center">
+      <div
+        class="bg-gradient-to-b from-primary/20 to-transparent p-10 md:p-20 rounded-[2rem] md:rounded-[3rem] border border-white/5">
+        <h2 class="text-3xl md:text-6xl font-display font-black mb-6 uppercase tracking-tight">Ready to grow your brand?
+        </h2>
+        <p class="text-gray-400 text-lg md:text-xl mb-10 md:mb-12">Let's create something remarkable together.</p>
+        <a class="inline-flex items-center px-8 py-4 md:px-10 md:py-5 bg-white text-black font-display font-bold rounded-full hover:bg-primary hover:text-white transition-all transform hover:scale-105"
+          href="pdfs/cv.pdf" download>
+          Download CV
+          <span class="material-symbols-outlined ml-2">download</span>
+        </a>
+      </div>
+    </div>
+  </section>
+  <footer class="bg-background-dark pt-24 pb-12 px-6 border-t border-white/5 relative overflow-hidden">
+    <div
+      class="absolute top-0 left-1/2 -translate-x-1/2 w-full h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent">
+    </div>
+
+    <div class="max-w-7xl mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-20">
+        <!-- Brand Section -->
+        <div class="space-y-6">
+          <a class="text-3xl font-display font-bold tracking-tighter text-white" href="#">ALIYA.</a>
+          <p class="text-gray-400 text-sm leading-relaxed max-w-xs">
+            Specializing in crafting data-backed marketing strategies and creative digital solutions for the Gulf
+            market.
+          </p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+              <svg class="w-5 h-5 fill-current text-gray-400 group-hover:text-white" viewBox="0 0 24 24">
+                <path
+                  d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+              <svg class="w-5 h-5 fill-current text-gray-400 group-hover:text-white" viewBox="0 0 24 24">
+                <path
+                  d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.84 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z" />
+              </svg>
+            </a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all group">
+              <svg class="w-5 h-5 fill-current text-gray-400 group-hover:text-white" viewBox="0 0 24 24">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="space-y-6">
+          <h4 class="text-white font-bold uppercase tracking-wider text-sm">Quick Links</h4>
+          <ul class="space-y-4 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-primary transition-colors">Home</a></li>
+            <li><a href="#about" class="hover:text-primary transition-colors">About Me</a></li>
+            <li><a href="#skills" class="hover:text-primary transition-colors">Skills</a></li>
+            <li><a href="#experience" class="hover:text-primary transition-colors">Experience</a></li>
+          </ul>
+        </div>
+
+        <!-- Services -->
+        <div class="space-y-6">
+          <h4 class="text-white font-bold uppercase tracking-wider text-sm">Expertise</h4>
+          <ul class="space-y-4 text-gray-400 text-sm">
+            <li><a href="#" class="hover:text-primary transition-colors">Marketing Strategy</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Social Media Ads</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Client Persuasion</a></li>
+            <li><a href="#" class="hover:text-primary transition-colors">Brand Growth</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="space-y-6">
+          <h4 class="text-white font-bold uppercase tracking-wider text-sm">Contact Details</h4>
+          <ul class="space-y-4">
+            <li class="flex items-center space-x-3 text-gray-400 text-sm">
+              <span class="material-symbols-outlined text-primary text-xl">mail</span>
+              <a href="mailto:lyabdalzz@gmail.com" class="hover:text-white transition-colors">lyabdalzz@gmail.com</a>
+            </li>
+            <li class="flex items-center space-x-3 text-gray-400 text-sm">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <svg class="w-full h-full fill-primary" viewBox="0 0 24 24">
+                  <path
+                    d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+                </svg>
+              </div>
+              <a href="https://wa.me/201003347128" target="_blank" class="hover:text-white transition-colors">
+                01003347128</a>
+            </li>
+            <li class="flex items-center space-x-3 text-gray-400 text-sm">
+              <span class="material-symbols-outlined text-primary text-xl">location_on</span>
+              <span>El-Mahalla El-Kubra, Gharbia</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pt-12 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+        <p class="text-gray-500 text-xs uppercase tracking-widest">
+          © 2024 Aliya Abdelaziz. Engineered for Excellence.
+        </p>
+        <div class="flex space-x-8 text-xs font-bold uppercase tracking-widest text-gray-500">
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <a class="fixed bottom-8 right-8 w-14 h-14 bg-black border border-white/10 rounded-full flex items-center justify-center hover:bg-white hover:text-black transition-all z-40"
+    href="#">
+    <span class="material-symbols-outlined">arrow_upward</span>
+  </a>
+
+  <script>
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const closeMenuBtn = document.getElementById('close-menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    const toggleMenu = () => {
+      mobileMenu.classList.toggle('translate-x-full');
+      document.body.classList.toggle('overflow-hidden');
+    };
+
+    mobileMenuBtn.addEventListener('click', toggleMenu);
+    closeMenuBtn.addEventListener('click', toggleMenu);
+
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.add('translate-x-full');
+        document.body.classList.remove('overflow-hidden');
+      });
+    });
+  </script>
+</body>
+
+</html>
