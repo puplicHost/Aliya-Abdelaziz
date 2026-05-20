@@ -136,7 +136,8 @@
         <span class="material-symbols-outlined">menu</span>
       </button>
       <div class="hidden md:flex items-center space-x-4">
-        <button id="lang-switch-btn" class="px-4 py-2 border border-white/10 hover:border-primary/40 rounded-full text-sm font-semibold hover:bg-white hover:text-black transition-all flex items-center gap-2">
+        <button id="lang-switch-btn"
+          class="px-4 py-2 border border-white/10 hover:border-primary/40 rounded-full text-sm font-semibold hover:bg-white hover:text-black transition-all flex items-center gap-2">
           <span class="material-symbols-outlined text-base">language</span>
           <span id="lang-switch-text">العربية</span>
         </button>
@@ -146,23 +147,24 @@
         </a>
       </div>
     </div>
-    <!-- Mobile Menu Overlay -->
+    <!-- Mobile Dropdown -->
     <div id="mobile-menu"
-      class="fixed inset-0 bg-black/95 z-50 flex flex-col items-center justify-center space-y-8 text-xl font-bold tracking-tighter transition-all duration-300 translate-x-full md:hidden">
-      <button id="close-menu-btn" class="absolute top-8 right-8 text-white">
-        <span class="material-symbols-outlined text-4xl">close</span>
-      </button>
-      <a class="hover:text-primary transition-colors mobile-link" href="#" data-i18n="nav_home">Home</a>
-      <a class="hover:text-primary transition-colors mobile-link" href="#about" data-i18n="nav_about">About</a>
-      <a class="hover:text-primary transition-colors mobile-link" href="#portfolio" data-i18n="nav_portfolio">Portfolio</a>
-      <a class="hover:text-primary transition-colors mobile-link" href="#experience" data-i18n="nav_experience">Experience</a>
-      <a class="hover:text-primary transition-colors mobile-link" href="#skills" data-i18n="nav_skills">Skills</a>
-      <a class="hover:text-primary transition-colors mobile-link" href="#education" data-i18n="nav_education">Education</a>
-      <button id="lang-switch-btn-mobile" class="px-6 py-2.5 border border-white/10 rounded-full text-base font-semibold hover:bg-white hover:text-black transition-all flex items-center gap-2">
+      class="absolute top-full left-0 w-full bg-black/95 border-b border-white/5 shadow-2xl shadow-primary/10 flex flex-col items-stretch px-6 py-6 space-y-4 text-lg font-bold transition-all duration-300 -translate-y-4 opacity-0 pointer-events-none md:hidden">
+      <a class="hover:text-primary transition-colors mobile-link py-3 border-b border-white/5" href="#" data-i18n="nav_home">Home</a>
+      <a class="hover:text-primary transition-colors mobile-link py-3 border-b border-white/5" href="#about" data-i18n="nav_about">About</a>
+      <a class="hover:text-primary transition-colors mobile-link py-3 border-b border-white/5" href="#portfolio"
+        data-i18n="nav_portfolio">Portfolio</a>
+      <a class="hover:text-primary transition-colors mobile-link py-3 border-b border-white/5" href="#experience"
+        data-i18n="nav_experience">Experience</a>
+      <a class="hover:text-primary transition-colors mobile-link py-3 border-b border-white/5" href="#skills" data-i18n="nav_skills">Skills</a>
+      <a class="hover:text-primary transition-colors mobile-link py-3 border-b border-white/5" href="#education"
+        data-i18n="nav_education">Education</a>
+      <button id="lang-switch-btn-mobile"
+        class="px-6 py-2.5 border border-white/10 rounded-full text-base font-semibold hover:bg-white hover:text-black transition-all flex items-center gap-2 self-start">
         <span class="material-symbols-outlined text-base">language</span>
         <span id="lang-switch-text-mobile">العربية</span>
       </button>
-      <a class="px-8 py-3 bg-primary rounded-full text-lg shadow-xl shadow-primary/20 mobile-link" href="pdfs/cv.pdf"
+      <a class="self-start px-8 py-3 bg-primary rounded-full text-lg shadow-xl shadow-primary/20 mobile-link" href="pdfs/cv.pdf"
         download data-i18n="download_cv">Download CV</a>
     </div>
   </nav>
@@ -175,9 +177,11 @@
     </div>
     <div class="relative z-10 text-center px-6 max-w-5xl mx-auto">
       <div class="flex flex-col items-center mb-8 md:mb-12">
-        <span class="text-3xl md:text-6xl font-display font-black tracking-tighter mb-4" data-i18n="hero_logo">ALIAA.</span>
+        <span class="text-3xl md:text-6xl font-display font-black tracking-tighter mb-4"
+          data-i18n="hero_logo">ALIAA.</span>
         <h1
-          class="text-3xl sm:text-5xl md:text-8xl font-display font-black leading-tight tracking-tight uppercase px-4 text-center" data-i18n="hero_title">
+          class="text-3xl sm:text-5xl md:text-8xl font-display font-black leading-tight tracking-tight uppercase px-4 text-center"
+          data-i18n="hero_title">
           CRAFTING DIGITAL<br class="hidden sm:block" /> SUCCESS STORIES
         </h1>
       </div>
@@ -199,10 +203,13 @@
           <h2 class="text-3xl md:text-5xl font-display font-bold mb-6" data-i18n="about_title">About Me</h2>
           <div class="w-20 h-1 bg-primary rounded-full mb-8"></div>
           <p class="text-gray-400 text-lg leading-relaxed mb-6" data-i18n="about_desc1">
-            I am a <strong>Textile Engineer</strong> by profession, with <strong>4 years of experience</strong> in the Gulf market. During this time, I have helped many brands solve their problems and reach their audience effectively.
+            I am a <strong>Textile Engineer</strong> by profession, with <strong>4 years of experience</strong> in the
+            Gulf market. During this time, I have helped many brands solve their problems and reach their audience
+            effectively.
           </p>
           <p class="text-gray-400 text-lg leading-relaxed" data-i18n="about_desc2">
-            I manage the <strong>brand journey</strong> from the start and create clear plans for creative teams to follow, making sure the final work is high quality and achieves real results for the client.
+            I manage the <strong>brand journey</strong> from the start and create clear plans for creative teams to
+            follow, making sure the final work is high quality and achieves real results for the client.
           </p>
         </div>
         <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -225,7 +232,8 @@
   <section class="bg-background-dark py-20 md:py-28 px-6 border-t border-white/5" id="skills">
     <div class="max-w-5xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-display font-bold mb-4 uppercase" data-i18n="skills_title">Creative Problem Solving</h2>
+        <h2 class="text-3xl md:text-5xl font-display font-bold mb-4 uppercase" data-i18n="skills_title">Creative Problem
+          Solving</h2>
         <div class="w-20 h-1 bg-primary rounded-full mx-auto mb-6"></div>
         <p class="text-gray-400 text-lg md:text-xl max-w-2xl mx-auto" data-i18n="skills_desc">
           تقديم حلول إبداعية لمشاكل البراندات وتطوير حضورها الرقمي.
@@ -246,7 +254,7 @@
               <div class="h-full bg-primary rounded-full" style="width: 92%"></div>
             </div>
           </div>
-          
+
           <!-- Skill 2 -->
           <div>
             <div class="flex justify-between mb-3 text-sm font-medium">
@@ -258,7 +266,7 @@
               <div class="h-full bg-primary rounded-full" style="width: 90%"></div>
             </div>
           </div>
-          
+
           <!-- Skill 3 -->
           <div>
             <div class="flex justify-between mb-3 text-sm font-medium">
@@ -270,7 +278,7 @@
               <div class="h-full bg-primary rounded-full" style="width: 88%"></div>
             </div>
           </div>
-          
+
           <!-- Skill 4 -->
           <div>
             <div class="flex justify-between mb-3 text-sm font-medium">
@@ -282,7 +290,7 @@
               <div class="h-full bg-primary rounded-full" style="width: 85%"></div>
             </div>
           </div>
-          
+
           <!-- Skill 5 -->
           <div class="md:col-span-2">
             <div class="flex justify-between mb-3 text-sm font-medium">
@@ -323,11 +331,14 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
           </div>
           <div class="space-y-4">
-            <h4 class="text-2xl font-display font-semibold" data-i18n="exp_card1_title">Brand Strategy &amp; Planning</h4>
-            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="exp_card1_desc">Building clear marketing plans that help brands grow and reach their goals effectively.</p>
+            <h4 class="text-2xl font-display font-semibold" data-i18n="exp_card1_title">Brand Strategy &amp; Planning
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="exp_card1_desc">Building clear marketing plans
+              that help brands grow and reach their goals effectively.</p>
             <a href="#"
               class="inline-flex items-center text-primary text-xs font-bold uppercase tracking-widest hover:translate-x-2 transition-transform">
-              <span data-i18n="learn_more">Learn More</span> <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+              <span data-i18n="learn_more">Learn More</span> <span
+                class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
@@ -341,11 +352,14 @@
             <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
           </div>
           <div class="space-y-4">
-            <h4 class="text-2xl font-display font-semibold" data-i18n="exp_card2_title">Account &amp; Team Management</h4>
-            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="exp_card2_desc">Managing client relationships and leading creative teams to ensure high-quality work and results.</p>
+            <h4 class="text-2xl font-display font-semibold" data-i18n="exp_card2_title">Account &amp; Team Management
+            </h4>
+            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="exp_card2_desc">Managing client relationships
+              and leading creative teams to ensure high-quality work and results.</p>
             <a href="#"
               class="inline-flex items-center text-purple-500 text-xs font-bold uppercase tracking-widest hover:translate-x-2 transition-transform">
-              <span data-i18n="learn_more">Learn More</span> <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+              <span data-i18n="learn_more">Learn More</span> <span
+                class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
@@ -360,10 +374,12 @@
           </div>
           <div class="space-y-4">
             <h4 class="text-2xl font-display font-semibold" data-i18n="exp_card3_title">Creative Problem Solving</h4>
-            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="exp_card3_desc">Providing smart and creative solutions to marketing challenges to keep the brand on the right track.</p>
+            <p class="text-gray-400 text-sm leading-relaxed" data-i18n="exp_card3_desc">Providing smart and creative
+              solutions to marketing challenges to keep the brand on the right track.</p>
             <a href="#"
               class="inline-flex items-center text-blue-400 text-xs font-bold uppercase tracking-widest hover:translate-x-2 transition-transform">
-              <span data-i18n="learn_more">Learn More</span> <span class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
+              <span data-i18n="learn_more">Learn More</span> <span
+                class="material-symbols-outlined ml-2 text-sm">arrow_forward</span>
             </a>
           </div>
         </div>
@@ -374,7 +390,8 @@
     <div class="max-w-7xl mx-auto">
       <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
         <div>
-          <h2 class="text-3xl md:text-5xl font-display font-bold mb-4 uppercase" data-i18n="port_title">Selected Portfolio</h2>
+          <h2 class="text-3xl md:text-5xl font-display font-bold mb-4 uppercase" data-i18n="port_title">Selected
+            Portfolio</h2>
           <div class="w-20 h-1 bg-primary rounded-full"></div>
           <p class="text-gray-400 mt-6 max-w-2xl" data-i18n="port_desc">
             A curated collection of marketing strategies, research, and creative plans developed for various brands in
@@ -383,7 +400,8 @@
         </div>
         <div class="flex space-x-2">
           <span
-            class="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest" data-i18n="port_badge">
+            class="px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest"
+            data-i18n="port_badge">
             15 Projects
           </span>
         </div>
@@ -684,31 +702,39 @@
   <section class="bg-background-dark py-24 px-6 border-t border-white/5">
     <div class="max-w-4xl mx-auto">
       <div class="text-center mb-16">
-        <h2 class="text-3xl md:text-5xl font-display font-bold mb-4" data-i18n="prof_title">Professional Proficiency</h2>
+        <h2 class="text-3xl md:text-5xl font-display font-bold mb-4" data-i18n="prof_title">Professional Proficiency
+        </h2>
         <div class="w-20 h-1 bg-primary rounded-full mx-auto"></div>
       </div>
       <div class="relative">
         <div class="skill-glow top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
+          <div
+            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
             <span class="material-symbols-outlined text-3xl mb-4 text-primary">language</span>
             <span class="text-lg font-medium" data-i18n="prof_c1_title">Arabic</span>
             <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest" data-i18n="prof_c1_desc">Native</span>
           </div>
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
+          <div
+            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
             <span class="material-symbols-outlined text-3xl mb-4 text-primary">translate</span>
             <span class="text-lg font-medium" data-i18n="prof_c2_title">English</span>
-            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest" data-i18n="prof_c2_desc">Upper Intermediate</span>
+            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest" data-i18n="prof_c2_desc">Upper
+              Intermediate</span>
           </div>
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
+          <div
+            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
             <span class="material-symbols-outlined text-3xl mb-4 text-primary">palette</span>
             <span class="text-lg font-medium" data-i18n="prof_c3_title">Adobe & Canva</span>
-            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest" data-i18n="prof_c3_desc">Creative Design</span>
+            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest" data-i18n="prof_c3_desc">Creative
+              Design</span>
           </div>
-          <div class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
+          <div
+            class="p-6 rounded-2xl bg-white/5 border border-white/10 hover:border-primary/40 transition-all card-glow flex flex-col items-center text-center">
             <span class="material-symbols-outlined text-3xl mb-4 text-primary">inventory_2</span>
             <span class="text-lg font-medium" data-i18n="prof_c4_title">MS Office</span>
-            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest" data-i18n="prof_c4_desc">Excel – Word</span>
+            <span class="text-xs text-gray-500 mt-1 uppercase tracking-widest" data-i18n="prof_c4_desc">Excel –
+              Word</span>
           </div>
         </div>
       </div>
@@ -718,7 +744,8 @@
     <div class="max-w-7xl mx-auto">
       <div class="text-center mb-20">
         <h2 class="text-4xl md:text-5xl font-display font-bold" data-i18n="edu_title">Educational Path</h2>
-        <p class="text-gray-500 mt-4 font-medium uppercase tracking-[0.2em] text-xs" data-i18n="edu_subtitle">Foundation of excellence</p>
+        <p class="text-gray-500 mt-4 font-medium uppercase tracking-[0.2em] text-xs" data-i18n="edu_subtitle">Foundation
+          of excellence</p>
       </div>
       <div class="relative max-w-4xl mx-auto">
         <div
@@ -739,7 +766,8 @@
                 2021 - 2025</div>
               <h4 class="text-2xl font-display font-semibold mb-2" data-i18n="edu_degree">Faculty of Applied Arts</h4>
               <p class="text-primary font-medium mb-4" data-i18n="edu_major">Department of Textile Engineering</p>
-              <p class="text-gray-400 text-sm leading-relaxed" data-i18n="edu_desc">Developing a unique perspective at the intersection of
+              <p class="text-gray-400 text-sm leading-relaxed" data-i18n="edu_desc">Developing a unique perspective at
+                the intersection of
                 technical engineering principles and creative design, providing a solid analytical foundation for
                 complex marketing strategies.</p>
             </div>
@@ -751,20 +779,23 @@
   <section class="bg-background-dark py-32 px-6 border-t border-white/5 overflow-hidden" id="experience">
     <div class="max-w-7xl mx-auto">
       <div class="mb-20">
-        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4 uppercase" data-i18n="journey_title">Professional Journey</h2>
+        <h2 class="text-4xl md:text-5xl font-display font-bold mb-4 uppercase" data-i18n="journey_title">Professional
+          Journey</h2>
         <div class="w-20 h-1 bg-primary rounded-full"></div>
       </div>
       <div class="bg-white/[0.03] border border-white/10 rounded-3xl p-8 md:p-12 card-glow transition-all">
         <div class="flex flex-col md:flex-row md:items-center justify-between mb-10 gap-4">
           <div>
-            <h3 class="text-3xl font-display font-bold text-white mb-2" data-i18n="journey_role">Public Relations &amp; Marketing Specialist</h3>
+            <h3 class="text-3xl font-display font-bold text-white mb-2" data-i18n="journey_role">Public Relations &amp;
+              Marketing Specialist</h3>
             <p class="text-primary text-xl font-medium" data-i18n="journey_company">Mulhamah</p>
             <p class="text-gray-500 flex items-center mt-2">
               <span class="material-symbols-outlined text-sm mr-2">location_on</span>
               <span data-i18n="journey_location">Saudi Arabia (Remote)</span>
             </p>
           </div>
-          <div class="bg-primary/10 border border-primary/20 px-6 py-3 rounded-full text-primary font-bold" data-i18n="journey_years">
+          <div class="bg-primary/10 border border-primary/20 px-6 py-3 rounded-full text-primary font-bold"
+            data-i18n="journey_years">
             4+ Years Experience
           </div>
         </div>
@@ -776,7 +807,8 @@
               </div>
               <div>
                 <h4 class="font-display font-semibold text-lg mb-1" data-i18n="journey_t1_title">Monthly Planning</h4>
-                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t1_desc">Developed and executed monthly plans to achieve
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t1_desc">Developed and executed
+                  monthly plans to achieve
                   specific brand milestones.</p>
               </div>
             </div>
@@ -786,7 +818,8 @@
               </div>
               <div>
                 <h4 class="font-display font-semibold text-lg mb-1" data-i18n="journey_t2_title">Content Strategy</h4>
-                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t2_desc">Created comprehensive content strategies and marketing
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t2_desc">Created comprehensive
+                  content strategies and marketing
                   plans aligned with business goals.</p>
               </div>
             </div>
@@ -795,8 +828,10 @@
                 <span class="material-symbols-outlined text-primary">account_circle</span>
               </div>
               <div>
-                <h4 class="font-display font-semibold text-lg mb-1" data-i18n="journey_t3_title">Social Media Management</h4>
-                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t3_desc">Managed official company accounts and maintained a
+                <h4 class="font-display font-semibold text-lg mb-1" data-i18n="journey_t3_title">Social Media Management
+                </h4>
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t3_desc">Managed official company
+                  accounts and maintained a
                   consistent digital presence.</p>
               </div>
             </div>
@@ -808,7 +843,8 @@
               </div>
               <div>
                 <h4 class="font-display font-semibold text-lg mb-1" data-i18n="journey_t4_title">Client Acquisition</h4>
-                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t4_desc">Acquired new clients and effectively handled ongoing
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t4_desc">Acquired new clients and
+                  effectively handled ongoing
                   customer relations.</p>
               </div>
             </div>
@@ -818,7 +854,8 @@
               </div>
               <div>
                 <h4 class="font-display font-semibold text-lg mb-1" data-i18n="journey_t5_title">Team Coordination</h4>
-                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t5_desc">Oversaw task progress and coordinated seamlessly with
+                <p class="text-gray-400 text-sm leading-relaxed" data-i18n="journey_t5_desc">Oversaw task progress and
+                  coordinated seamlessly with
                   the team to ensure delivery.</p>
               </div>
             </div>
@@ -832,8 +869,10 @@
     <div class="max-w-4xl mx-auto text-center">
       <div
         class="bg-gradient-to-b from-primary/20 to-transparent p-10 md:p-20 rounded-[2rem] md:rounded-[3rem] border border-white/5">
-        <h2 class="text-3xl md:text-6xl font-display font-black mb-6 uppercase tracking-tight" data-i18n="cta_title">Ready to grow your brand?</h2>
-        <p class="text-gray-400 text-lg md:text-xl mb-10 md:mb-12" data-i18n="cta_desc">Let's create something remarkable together.</p>
+        <h2 class="text-3xl md:text-6xl font-display font-black mb-6 uppercase tracking-tight" data-i18n="cta_title">
+          Ready to grow your brand?</h2>
+        <p class="text-gray-400 text-lg md:text-xl mb-10 md:mb-12" data-i18n="cta_desc">Let's create something
+          remarkable together.</p>
         <a class="inline-flex items-center px-8 py-4 md:px-10 md:py-5 bg-white text-black font-display font-bold rounded-full hover:bg-primary hover:text-white transition-all transform hover:scale-105"
           href="pdfs/cv.pdf" download>
           <span data-i18n="download_cv">Download CV</span>
@@ -851,7 +890,8 @@
       <div class="grid grid-cols-1 md:grid-cols-3 gap-16 mb-20">
         <!-- Brand Section -->
         <div class="space-y-6">
-          <a class="text-3xl font-display font-bold tracking-tighter text-white" href="#" data-i18n="footer_logo">ALIAA.</a>
+          <a class="text-3xl font-display font-bold tracking-tighter text-white" href="#"
+            data-i18n="footer_logo">ALIAA.</a>
           <p class="text-gray-400 text-sm leading-relaxed max-w-xs" data-i18n="footer_desc">
             Specializing in crafting data-backed marketing strategies and creative digital solutions for the Gulf
             market.
@@ -861,18 +901,21 @@
 
         <!-- Quick Links -->
         <div class="space-y-6">
-          <h4 class="text-white font-bold uppercase tracking-wider text-sm" data-i18n="footer_links_title">Quick Links</h4>
+          <h4 class="text-white font-bold uppercase tracking-wider text-sm" data-i18n="footer_links_title">Quick Links
+          </h4>
           <ul class="space-y-4 text-gray-400 text-sm">
             <li><a href="#" class="hover:text-primary transition-colors" data-i18n="nav_home">Home</a></li>
             <li><a href="#about" class="hover:text-primary transition-colors" data-i18n="nav_about_me">About Me</a></li>
             <li><a href="#skills" class="hover:text-primary transition-colors" data-i18n="nav_skills">Skills</a></li>
-            <li><a href="#experience" class="hover:text-primary transition-colors" data-i18n="nav_experience">Experience</a></li>
+            <li><a href="#experience" class="hover:text-primary transition-colors"
+                data-i18n="nav_experience">Experience</a></li>
           </ul>
         </div>
 
         <!-- Contact Info -->
         <div class="space-y-6">
-          <h4 class="text-white font-bold uppercase tracking-wider text-sm" data-i18n="footer_contact_title">Contact Details</h4>
+          <h4 class="text-white font-bold uppercase tracking-wider text-sm" data-i18n="footer_contact_title">Contact
+            Details</h4>
           <ul class="space-y-4">
             <li class="flex items-center space-x-3 text-gray-400 text-sm">
               <span class="material-symbols-outlined text-primary text-xl">mail</span>
@@ -917,22 +960,22 @@
 
   <script>
     const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const closeMenuBtn = document.getElementById('close-menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
     const mobileLinks = document.querySelectorAll('.mobile-link');
 
     const toggleMenu = () => {
-      mobileMenu.classList.toggle('translate-x-full');
-      document.body.classList.toggle('overflow-hidden');
+      mobileMenu.classList.toggle('-translate-y-4');
+      mobileMenu.classList.toggle('opacity-0');
+      mobileMenu.classList.toggle('pointer-events-none');
     };
 
     mobileMenuBtn.addEventListener('click', toggleMenu);
-    closeMenuBtn.addEventListener('click', toggleMenu);
 
     mobileLinks.forEach(link => {
       link.addEventListener('click', () => {
-        mobileMenu.classList.add('translate-x-full');
-        document.body.classList.remove('overflow-hidden');
+        mobileMenu.classList.add('-translate-y-4');
+        mobileMenu.classList.add('opacity-0');
+        mobileMenu.classList.add('pointer-events-none');
       });
     });
 
@@ -1152,7 +1195,7 @@
     // Language Toggle Function
     const setLanguage = (lang) => {
       const htmlEl = document.documentElement;
-      
+
       // Update HTML attributes
       htmlEl.setAttribute('lang', lang);
       if (lang === 'ar') {
