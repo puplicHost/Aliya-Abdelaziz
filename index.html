@@ -144,6 +144,9 @@
             transition: opacity 0.5s ease, transform 0.5s ease;
         }
         .stagger.visible > * { opacity: 1; transform: translateY(0); }
+        /* Individual children can also be revealed directly (used by the portfolio
+           card observer, where the grid itself is far taller than the viewport). */
+        .stagger > *.visible { opacity: 1; transform: translateY(0); }
         .stagger.visible > *:nth-child(1) { transition-delay: 0s; }
         .stagger.visible > *:nth-child(2) { transition-delay: 0.08s; }
         .stagger.visible > *:nth-child(3) { transition-delay: 0.16s; }
@@ -1350,45 +1353,84 @@
     });
 
     // Scroll Animations
-    const animObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          if (entry.target.classList.contains('skill-fill')) {
-            const w = entry.target.getAttribute('data-width');
-            if (w) entry.target.style.width = w + '%';
-          }
-        }
-      });
-    }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+    const portfolioGrid = document.querySelector('#portfolio .grid.stagger');
+    const portfolioCardEls = portfolioGrid ? Array.from(portfolioGrid.children) : [];
 
-    document.querySelectorAll('.reveal, .stagger, .skill-fill, .hero-fade').forEach(el => {
-      animObserver.observe(el);
-    });
+    // Safety fallback: content in #portfolio must never stay stuck at opacity 0.
+    const revealAllPortfolio = () => {
+      document.querySelectorAll('#portfolio .reveal, #portfolio .stagger, #portfolio .stagger > *')
+        .forEach(el => el.classList.add('visible'));
+    };
+
+    if (typeof IntersectionObserver !== 'undefined') {
+      const animObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            if (entry.target.classList.contains('skill-fill')) {
+              const w = entry.target.getAttribute('data-width');
+              if (w) entry.target.style.width = w + '%';
+            }
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+      // Everything except the portfolio grid keeps the original container-based
+      // animation, so desktop/tablet behaviour elsewhere is unchanged.
+      document.querySelectorAll('.reveal, .stagger, .skill-fill, .hero-fade').forEach(el => {
+        if (el !== portfolioGrid) animObserver.observe(el);
+      });
+
+      // Portfolio: observe each card instead of the very tall grid container.
+      // A container with threshold 0.1 is never 10% visible on a single-column
+      // mobile layout, so .visible was never added and cards stayed hidden.
+      portfolioCardEls.forEach((card, index) => {
+        // Bounded stagger delay (max 480ms) so late cards don't wait seconds.
+        card.style.transitionDelay = Math.min(index, 6) * 80 + 'ms';
+      });
+
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            cardObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+
+      portfolioCardEls.forEach(card => cardObserver.observe(card));
+    } else {
+      revealAllPortfolio();
+    }
+
+    // Last-resort fallback in case an intersection never fires.
+    setTimeout(revealAllPortfolio, 2000);
 
     // Counter animation
-    const counters = document.querySelectorAll('.counter');
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-target'));
-          let current = 0;
-          const step = Math.max(1, Math.floor(target / 40));
-          const timer = setInterval(() => {
-            current += step;
-            if (current >= target) {
-              current = target;
-              clearInterval(timer);
-            }
-            el.textContent = current + '%';
-          }, 25);
-          counterObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
+    if (typeof IntersectionObserver !== 'undefined') {
+      const counters = document.querySelectorAll('.counter');
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const el = entry.target;
+            const target = parseInt(el.getAttribute('data-target'));
+            let current = 0;
+            const step = Math.max(1, Math.floor(target / 40));
+            const timer = setInterval(() => {
+              current += step;
+              if (current >= target) {
+                current = target;
+                clearInterval(timer);
+              }
+              el.textContent = current + '%';
+            }, 25);
+            counterObserver.unobserve(el);
+          }
+        });
+      }, { threshold: 0.5 });
 
-    counters.forEach(el => counterObserver.observe(el));
+      counters.forEach(el => counterObserver.observe(el));
+    }
 
     // Navbar scroll effect
     const nav = document.querySelector('nav');
